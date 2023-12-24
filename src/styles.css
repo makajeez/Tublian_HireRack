@@ -69,6 +69,14 @@ form {
 }
 
 .tc {
-    position: fixed;
-    bottom: 35px;
+    position: absolute;
+  bottom: 10px;
+}
+
+mat-error{
+    color: rgb(179, 61, 61) !important;
+    font-weight: lighter;
+}
+::placeholder {
+    color: #696969 !important;
 }

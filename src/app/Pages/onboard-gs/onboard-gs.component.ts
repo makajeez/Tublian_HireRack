@@ -26,8 +26,8 @@ export class OnboardGsComponent {
 
   ngOnInit(){
     this.gsForm = this.fb.group({
-      fn: ['', [ Validators.minLength(3)]],
-      ln: ['', [ Validators.min(3),  /*Validators.required */]]
+      fn: ['', [ Validators.minLength(3), Validators.required]],
+      ln: ['', [ Validators.minLength(3), Validators.required ]]
     })
   }
 }
