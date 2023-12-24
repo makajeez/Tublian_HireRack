@@ -67,3 +67,8 @@ form {
     display: block !important;
     width: 65%
 }
+
+.tc {
+    position: fixed;
+    bottom: 35px;
+}
