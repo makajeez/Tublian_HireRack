@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:host {
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.flex {
+    display: flex;
+}
+.gap-15 {
+    gap: 15px;
+}
+.icon-set {
+    margin-right: 35px;
+}
+.icon {
+    width: 21.531px;
+    height: 24.913px;
+    margin: 10px 5px 0px 15px;
+}
+.icon-text {
+    color: #FEFEFE;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px 5px 0px 0px;
+}
+.nav {
+    align-items: end;
+}
+h3 {
+    color: #696969;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    word-wrap: break-word
+}
