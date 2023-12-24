@@ -56,9 +56,3 @@ h3 {
     line-height: 20px;
     margin-right: 10px;
 }
-h3:active {
-    color: aqua;
-}
-.gradient {
-    color: linear-gradient(90deg, red 0%, yellow 50%, white 100%) !important;
-}
