@@ -80,3 +80,10 @@ mat-error{
 ::placeholder {
     color: #696969 !important;
 }
+input {
+    color: #FEFEFE !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: solid 1px #FEFEFE !important;
+    border-left: none !important;
+}

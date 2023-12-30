@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { RouterModule }  from '@angular/router'
 
 
  
@@ -14,7 +15,8 @@ import {MatFormFieldModule} from '@angular/material/form-field'
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './onboard-gs.component.html',
   styleUrl: './onboard-gs.component.css'
