@@ -73,20 +73,24 @@ form {
   bottom: 10px;
 }
 
-mat-error{
-    color: rgb(179, 61, 61) !important;
-    font-weight: lighter;
-}
 ::placeholder {
     color: #696969 !important;
 }
 input {
-    color: #FEFEFE !important;
-    border-top: none !important;
-    border-right: none !important;
-    border-bottom: solid 1px #FEFEFE !important;
-    border-left: none !important;
+    color: #FEFEFE;
+    background-color: transparent;
+    border-bottom: solid 2px #696969;
+    width: 100%;
+    padding: 10px;
+    outline: none;
 }
+small {
+    color: red;
+}
+.error-input {
+    border-bottom: solid 2px rgba(255, 0, 0, 0.521)
+}
+
 .halved {
-    width: 50vw !important;
+    width: 100%;
 }
