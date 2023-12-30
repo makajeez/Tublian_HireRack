@@ -87,3 +87,6 @@ input {
     border-bottom: solid 1px #FEFEFE !important;
     border-left: none !important;
 }
+.halved {
+    width: 50vw !important;
+}
