@@ -889,28 +889,24 @@
         <form class="px-3 py-10" action="" [formGroup]='gsForm'>
             <h1>Get Started</h1>
             <h3 class="mt-3 mb-7">Start recruiting streetcred developers, Today!!</h3>
-            <mat-form-field [appearance]="'outline'" class="my-3 w-full" style="height: 65px;">
-                <input type="text" matInput formControlName="fn" placeholder="First Name">
+
+            <input type="text" class="my-3" formControlName="fn" placeholder="First Name" value="John">
                 @if (this.gsForm.controls['fn'].hasError('minlength')) {
-                  <mat-error>min of 3 character</mat-error>
+                  <small>min of 3 character</small>
                 }
                 @if (this.gsForm.controls['fn'].hasError('required')) {
-                  <mat-error>name is required</mat-error>
+                  <small>firstname is required</small>
                 }
-            </mat-form-field>
 
-            <mat-form-field [appearance]="'outline'" class="my-3 w-full " style="height: 65px;">
-                <input type="text" matInput formControlName="ln" placeholder="Last Name">
+            <input type="text" class="mt-3 mb-10" formControlName="ln" placeholder="First Name" value="Doe">
                 @if (this.gsForm.controls['ln'].hasError('minlength')) {
-                  <mat-error>min of 3 character</mat-error>
+                    <small>min of 3 character</small>
                 }
                 @if (this.gsForm.controls['ln'].hasError('required')) {
-                  <mat-error>name is required</mat-error>
+                    <small>lastname is required</small>
                 }
-            </mat-form-field>
             
-            
-            <button class="w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold">Proceed</button>
+            <button class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold">Proceed</button>
 
             <h3 class="mt-10">Already have an account? <a href='' style="color: #FEFEFE; font-size: 20px;font-weight: 500;text-decoration: underline;">Log in</a></h3>
 
