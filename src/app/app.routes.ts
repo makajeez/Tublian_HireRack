@@ -6,6 +6,7 @@ import { OnboardPComponent } from './Pages/onboard-p/onboard-p.component';
 
 export const routes: Routes = [
     {path: '', component: OnboardGsComponent},
+    {path: 'get-started', redirectTo: '', pathMatch: 'full'},
     {path: 'create-account', component: OnboardCaComponent},
     {path: 'account-setup', component: OnboardAsComponent},
     {path: 'payment', component: OnboardPComponent},
