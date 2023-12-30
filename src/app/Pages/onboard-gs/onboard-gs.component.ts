@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -16,7 +16,8 @@ import { RouterModule }  from '@angular/router'
     MatInputModule,
     MatFormFieldModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgClass
   ],
   templateUrl: './onboard-gs.component.html',
   styleUrl: './onboard-gs.component.css'
@@ -28,8 +29,8 @@ export class OnboardGsComponent {
 
   ngOnInit(){
     this.gsForm = this.fb.group({
-      fn: ['', [ Validators.minLength(3), Validators.required]],
-      ln: ['', [ Validators.minLength(3), Validators.required ]]
+      fn: ['John', [ Validators.minLength(3), Validators.required]],
+      ln: ['Doe', [ Validators.minLength(3), Validators.required ]]
     })
   }
 }
