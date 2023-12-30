@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field'
 import { RouterModule }  from '@angular/router'
 
 @Component({
@@ -11,8 +9,6 @@ import { RouterModule }  from '@angular/router'
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatFormFieldModule,
     CommonModule,
     RouterModule
   ],
