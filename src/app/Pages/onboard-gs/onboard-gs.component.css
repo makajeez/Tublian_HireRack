@@ -4,6 +4,3 @@
 .redBottom::placeholder {
     color: red !important;
 }
-.normal {
-    border-bottom: solid 2px #696969 !important;
-}

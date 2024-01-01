@@ -906,7 +906,7 @@
                     <small>lastname is required</small>
                 }
             
-            <button class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold">Proceed</button>
+            <button [ngClass]="{'bg-yellow-600': gsForm.invalid}" class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold" [disabled]="gsForm.invalid">Proceed</button>
 
             <h3 class="mt-10">Already have an account? <a href='' style="color: #FEFEFE; font-size: 20px;font-weight: 500;text-decoration: underline;">Log in</a></h3>
 
