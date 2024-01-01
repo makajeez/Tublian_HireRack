@@ -69,8 +69,13 @@ form {
 }
 
 .tc {
-    position: absolute;
-  bottom: 10px;
+    position: fixed;
+    bottom: 15px;
+    gap: 10px;
+}
+
+.tc > :hover {
+    color: #FEFEFE;
 }
 
 ::placeholder {
