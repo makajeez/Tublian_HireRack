@@ -1,6 +1,0 @@
-.redBottom {
-    border-bottom: solid 2px red !important;
-}
-.redBottom::placeholder {
-    color: red !important;
-}
