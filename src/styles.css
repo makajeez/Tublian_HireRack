@@ -99,3 +99,8 @@ small {
 .halved {
     width: 100%;
 }
+.active {
+    background: linear-gradient(90deg, rgb(233, 229, 5) 0%, rgb(187, 8, 231) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
