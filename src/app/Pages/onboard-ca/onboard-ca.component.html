@@ -251,10 +251,10 @@
                 } -->
                 <div [ngClass]="{noDisplay: this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')}">
                     <div class="flex gap-7">
-                        <small>8 Characters Minimum</small>
-                        <small>One Uppercase Character</small>
+                        <small [ngClass]="{satisfied: this.caForm.controls['pw'].value.length >= 8}">8 Characters Minimum</small>
+                        <small [ngClass]="{satisfied: this.caForm.controls['pw'].value.match('[A-Z]')}">One Uppercase Character</small>
                     </div>
-                    <small>One Symbol Character</small>
+                    <small [ngClass]="{satisfied: this.caForm.controls['pw'].value.match('[!@#$%^&*]')}">One Symbol Character</small>
                 </div>
             
                 <!-- <div>{{this.caForm.controls['pw'].errors | json }}</div> -->
