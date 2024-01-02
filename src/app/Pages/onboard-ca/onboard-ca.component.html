@@ -236,19 +236,26 @@
                   <small>Enter a valid email address </small>
                 }
                 @if (this.caForm.controls['email'].touched && this.caForm.controls['email'].hasError('required')) {
-                  <small>email is required</small>
+                  <small>Email is required</small>
                 }
 
             <input type="password" [ngClass]="{redBottom: this.caForm.controls['pw'].touched && (this.caForm.controls['pw'].hasError('required') || this.caForm.controls['pw'].hasError('minlength')) }" class="my-3" formControlName="pw" placeholder="Password">
-                @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('minlength')) {
-                    <small>min of 8 character</small>
-                }
                 @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')) {
-                    <small>lastname is required</small>
+                    <small>Password is required</small>
                 }
-                @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('pattern')) {
+                <!-- @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('minlength')) {
+                    <small>Minimum of 8 character</small>
+                } -->
+                <!-- @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('pattern')) {
                     <small>Fulfill the required pattern</small>
-                }
+                } -->
+                <div [ngClass]="{noDisplay: this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')}">
+                    <div class="flex gap-7">
+                        <small>8 Characters Minimum</small>
+                        <small>One Uppercase Character</small>
+                    </div>
+                    <small>One Symbol Character</small>
+                </div>
             
                 <!-- <div>{{this.caForm.controls['pw'].errors | json }}</div> -->
             <button [ngClass]="{'bg-yellow-600': caForm.invalid}" class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold" [disabled]="caForm.invalid">Create Account</button>
