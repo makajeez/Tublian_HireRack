@@ -231,19 +231,19 @@
             <h1>Create Account</h1>
             <h3 class="mt-3 mb-7" >Creating account for &#64;{{fn}}{{ln}}</h3>
 
-            <input type="email" [ngClass]="{redBottom: this.caForm.controls['email'].hasError('required') || this.caForm.controls['email'].hasError('email') }" class="my-3" formControlName="email" placeholder="Email">
-                @if (this.caForm.controls['email'].hasError('email')) {
+            <input type="email" [ngClass]="{redBottom: this.caForm.controls['email'].touched && (this.caForm.controls['email'].hasError('required') || this.caForm.controls['email'].hasError('email'))}" class="my-3" formControlName="email" placeholder="Email">
+                @if (this.caForm.controls['email'].touched && this.caForm.controls['email'].hasError('email')) {
                   <small>Enter a valid email address </small>
                 }
-                @if (this.caForm.controls['email'].hasError('required')) {
+                @if (this.caForm.controls['email'].touched && this.caForm.controls['email'].hasError('required')) {
                   <small>email is required</small>
                 }
 
-            <input type="password" [ngClass]="{redBottom: this.caForm.controls['pw'].hasError('required') || this.caForm.controls['pw'].hasError('minlength') }" class="my-3" formControlName="pw" placeholder="Password">
-                @if (this.caForm.controls['pw'].hasError('minlength')) {
+            <input type="password" [ngClass]="{redBottom: this.caForm.controls['pw'].touched && (this.caForm.controls['pw'].hasError('required') || this.caForm.controls['pw'].hasError('minlength')) }" class="my-3" formControlName="pw" placeholder="Password">
+                @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('minlength')) {
                     <small>min of 8 character</small>
                 }
-                @if (this.caForm.controls['pw'].hasError('required')) {
+                @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')) {
                     <small>lastname is required</small>
                 }
             
