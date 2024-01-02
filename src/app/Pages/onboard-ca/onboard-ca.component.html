@@ -246,6 +246,9 @@
                 @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')) {
                     <small>lastname is required</small>
                 }
+                @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('pattern')) {
+                    <small>Fulfill the required pattern</small>
+                }
             
                 <!-- <div>{{this.caForm.controls['pw'].errors | json }}</div> -->
             <button [ngClass]="{'bg-yellow-600': caForm.invalid}" class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold" [disabled]="caForm.invalid">Create Account</button>
