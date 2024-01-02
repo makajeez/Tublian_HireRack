@@ -122,3 +122,26 @@ small {
 .link {
     color: skyblue
 }
+.orDivider {
+    border-top: 1px solid #535252;
+    overflow: visible;
+    color: #696969;
+    text-align: center;
+    /* border: 0; */
+    /* height: 1px; */
+    /* padding: 0px; */
+  }
+  
+  .orDivider::after {
+      content: "Or";
+      position: relative;
+      top: -0.8em;
+      padding: 0 0.7em;
+      background: black;
+      /* background: transparent; */
+      /* display: inline-block; */
+      /* font-size: 1.4em; */
+  }
+  .gradient-border {
+        border-color: 1.5px solid linear-gradient(90deg, rgb(233, 229, 5) 0%, rgb(187, 8, 231) 100%);
+  }

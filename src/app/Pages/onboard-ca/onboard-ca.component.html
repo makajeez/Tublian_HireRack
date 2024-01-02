@@ -233,15 +233,15 @@
 
             <input type="email" [ngClass]="{redBottom: this.caForm.controls['email'].touched && (this.caForm.controls['email'].hasError('required') || this.caForm.controls['email'].hasError('email'))}" class="my-3" formControlName="email" placeholder="Email">
                 @if (this.caForm.controls['email'].touched && this.caForm.controls['email'].hasError('email')) {
-                  <small>Enter a valid email address </small>
+                  <small class="err">Enter a valid email address </small>
                 }
                 @if (this.caForm.controls['email'].touched && this.caForm.controls['email'].hasError('required')) {
-                  <small>Email is required</small>
+                  <small class="err">Email is required</small>
                 }
 
             <input type="password" [ngClass]="{redBottom: this.caForm.controls['pw'].touched && (this.caForm.controls['pw'].hasError('required') || this.caForm.controls['pw'].hasError('minlength')) }" class="my-3" formControlName="pw" placeholder="Password">
                 @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')) {
-                    <small>Password is required</small>
+                    <small class="err">Password is required</small>
                 }
                 <!-- @if (this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('minlength')) {
                     <small>Minimum of 8 character</small>
@@ -260,7 +260,16 @@
                 <!-- <div>{{this.caForm.controls['pw'].errors | json }}</div> -->
             <button type="submit" [ngClass]="{'bg-yellow-600': caForm.invalid}" class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold" [disabled]="caForm.invalid">Create Account</button>
 
-            <h3 class="mt-10">Already have an account? <a href='' style="color: #FEFEFE; font-size: 20px;font-weight: 500;text-decoration: underline;">Log in</a></h3>
+            <hr class="orDivider">
+
+            <button type="submit" class="mt-10 w-full min-h-10 rounded-full bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 text-white font-bold gradient-border">
+                <!-- <span class="flex center-text">
+                    <img src="assets/img/google.png" alt=""> -->
+                    Sign up with Google
+                <!-- </span> -->
+            </button>
+
+            <h3 class="mt-5">Already have an account? <a href='' style="color: #FEFEFE; font-size: 20px;font-weight: 500;text-decoration: underline;">Log in</a></h3>
 
             <div class="tc flex">
                 <h3>Privacy Policy</h3>
