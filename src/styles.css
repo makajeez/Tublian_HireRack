@@ -89,8 +89,11 @@ input {
     padding: 5px 0px 5px 0px;
     outline: none;
 }
-small {
+small.err {
     color: red;
+}
+small {
+    color: #696969;
 }
 .error-input {
     border-bottom: solid 2px rgba(255, 0, 0, 0.521)
@@ -115,4 +118,7 @@ small {
 }
 .satisfied {
     color: lightgreen;
+}
+.link {
+    color: skyblue
 }
