@@ -250,11 +250,11 @@
                     <small>Fulfill the required pattern</small>
                 } -->
                 <div [ngClass]="{noDisplay: this.caForm.controls['pw'].touched && this.caForm.controls['pw'].hasError('required')}">
-                    <div class="flex gap-7">
-                        <small [ngClass]="{satisfied: this.caForm.controls['pw'].value.length >= 8}">8 Characters Minimum</small>
-                        <small [ngClass]="{satisfied: this.caForm.controls['pw'].value.match('[A-Z]')}">One Uppercase Character</small>
+                    <div class="flex gap-7 mb-1">
+                        <small class="flex gap-1" [ngClass]="{satisfied: this.caForm.controls['pw'].value.length >= 8}"><img height="13px" width="13px" src="assets/img/okay.png" alt="">8 Characters Minimum</small>
+                        <small class="flex gap-1" [ngClass]="{satisfied: this.caForm.controls['pw'].value.match('[A-Z]')}"><img height="13px" width="13px" src="assets/img/okay.png" alt="">One Uppercase Character</small>
                     </div>
-                    <small [ngClass]="{satisfied: this.caForm.controls['pw'].value.match('[!@#$%^&*]')}">One Symbol Character</small>
+                    <small class="flex gap-1" [ngClass]="{satisfied: this.caForm.controls['pw'].value.match('[!@#$%^&*]')}"><img height="13px" width="13px" src="assets/img/okay.png" alt="">One Symbol Character</small>
                 </div>
             
                 <!-- <div>{{this.caForm.controls['pw'].errors | json }}</div> -->
