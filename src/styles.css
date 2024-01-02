@@ -113,3 +113,6 @@ small {
 .noDisplay {
     display: none;
 }
+.satisfied {
+    color: lightgreen;
+}
