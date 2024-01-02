@@ -1,7 +1,7 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterModule }  from '@angular/router'
+import { RouterModule, Router }  from '@angular/router'
 
 
  
@@ -21,12 +21,21 @@ import { RouterModule }  from '@angular/router'
 export class OnboardGsComponent {
   gsForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(){
     this.gsForm = this.fb.group({
       fn: ['John', [ Validators.minLength(3), Validators.required]],
       ln: ['Doe', [ Validators.minLength(3), Validators.required ]]
+    })
+  }
+
+  createAccount() {
+    this.router.navigate(['/create-account'], {
+      state: {
+        fn: this.gsForm.controls['fn'].value,
+        ln: this.gsForm.controls['ln'].value
+      }
     })
   }
 }
