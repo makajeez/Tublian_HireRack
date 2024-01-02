@@ -110,3 +110,6 @@ small {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.noDisplay {
+    display: none;
+}
