@@ -892,18 +892,18 @@
 
             <input type="text" [ngClass]="{redBottom: this.gsForm.controls['fn'].touched && (this.gsForm.controls['fn'].hasError('required') || this.gsForm.controls['fn'].hasError('minlength')) }" class="my-3" formControlName="fn" placeholder="First Name">
                 @if (this.gsForm.controls['fn'].touched && this.gsForm.controls['fn'].hasError('minlength')) {
-                  <small>Minimum of 3 character</small>
+                  <small class="err">Minimum of 3 character</small>
                 }
                 @if ( this.gsForm.controls['fn'].touched && this.gsForm.controls['fn'].hasError('required')) {
-                  <small>Firstname is required</small>
+                  <small class="err">Firstname is required</small>
                 }
 
             <input type="text" [ngClass]="{redBottom: this.gsForm.controls['ln'].touched && (this.gsForm.controls['ln'].hasError('required') || this.gsForm.controls['ln'].hasError('minlength')) }" class="my-3" formControlName="ln" placeholder="Last Name">
                 @if (this.gsForm.controls['ln'].touched && this.gsForm.controls['ln'].hasError('minlength')) {
-                    <small>Minimum of 3 character</small>
+                    <small class="err">Minimum of 3 character</small>
                 }
                 @if (this.gsForm.controls['ln'].touched && this.gsForm.controls['ln'].hasError('required')) {
-                    <small>Lastname is required</small>
+                    <small class="err">Lastname is required</small>
                 }
             
             <button type="submit" [ngClass]="{'bg-yellow-600': gsForm.invalid}"  class="my-10 w-full min-h-10 rounded-full bg-yellow-400 text-black font-bold" [disabled]="gsForm.invalid">Proceed</button>
